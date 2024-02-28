@@ -1,0 +1,38 @@
+.header {
+  background-color: $bg-header-main;
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 0;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__center {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 15% 35% 50%;
+    margin: 10px 0;
+    &--logo {
+      max-width: 100px;
+    }
+    &--search {
+      width: 100%;
+    }
+    &--right {
+      display: flex;
+      column-gap: 20px;
+      justify-content: end;
+      button {
+        color: #fff;
+        font-size: 20px;
+        width: auto;
+        height: 40px;
+        text-align: center;
+        line-height: 20px;
+        border: none;
+      }
+    }
+  }
+}
