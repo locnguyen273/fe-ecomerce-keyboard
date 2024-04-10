@@ -3,35 +3,48 @@
   &__container {
     max-width: 1200px;
     margin: auto;
-    padding: 10px 0;
-  }
-  &__row {
-    display: flex;
-    justify-content: space-between;
+    padding: 10px;
   }
   &__center {
     display: grid;
+    grid-template-columns: 12% 45% 25% 15%;
     align-items: center;
-    grid-template-columns: 15% 35% 50%;
     margin: 10px 0;
     &--logo {
       max-width: 100px;
     }
-    &--search {
-      width: 100%;
+  }
+  &__menu-list {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+    &--item {
+      font-size: 17px;
+      color: $txt-white;
+      text-transform: uppercase;
     }
-    &--right {
-      display: flex;
-      column-gap: 20px;
-      justify-content: end;
-      button {
-        color: #fff;
-        font-size: 20px;
-        width: auto;
-        height: 40px;
-        text-align: center;
-        line-height: 20px;
-        border: none;
+  }
+  &__search {
+    max-width: 300px;
+  }
+  &__right {
+    display: flex;
+    column-gap: 20px;
+    justify-content: end;
+    button {
+      color: $txt-white-opacity;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      line-height: 20px;
+      border: none;
+      background: none !important;
+      padding: 0;
+      transition: 0.3s color;
+      &:hover {
+        color: $txt-white !important;
       }
     }
   }
