@@ -4,11 +4,13 @@ import Header from "../../components/header";
 
 const ClientTemplate = () => {
   return (
-    <>
+    <div className="temp-client">
       <Header />
-      <Outlet />
+      <div className="temp-client__boby">
+        <Outlet />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
