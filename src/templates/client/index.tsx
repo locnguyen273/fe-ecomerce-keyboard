@@ -6,7 +6,7 @@ const ClientTemplate = () => {
   return (
     <div className="temp-client">
       <Header />
-      <div className="temp-client__boby">
+      <div className="temp-client__body">
         <Outlet />
       </div>
       <Footer />

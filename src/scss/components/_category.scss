@@ -1,0 +1,49 @@
+.category {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  margin: 30px 0;
+
+  &__item {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    &--image {
+      height: 100%;
+      transition: all 400ms ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &--name {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      text-transform: capitalize;
+      font-weight: 500;
+      transition: all 400ms ease;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .category {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@include mobile {
+  .category {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}

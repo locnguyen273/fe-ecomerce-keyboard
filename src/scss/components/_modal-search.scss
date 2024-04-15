@@ -33,3 +33,10 @@
     transform: translateY(75px);
   }
 }
+
+@include mobile {
+  .modal-search {
+    max-width: calc(100% - 30px);
+    right: 15px;
+  }
+}

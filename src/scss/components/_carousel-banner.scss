@@ -7,3 +7,15 @@
   object-fit: cover;
   height: 100%;
 }
+
+@include tablet {
+  .carousel-banner {
+    height: 400px;
+  }
+}
+
+@include mobile {
+  .carousel-banner {
+    height: 220px;
+  }
+}
