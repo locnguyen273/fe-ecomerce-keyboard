@@ -1,10 +1,10 @@
-// import CarouselBanner from "../../components/carousel-banner"
+import CarouselBanner from "../../components/carousel-banner"
 
 
 const Home = () => {
   return (
     <div>
-      {/* <CarouselBanner></CarouselBanner> */}
+      <CarouselBanner></CarouselBanner>
       Home
     </div>
   )

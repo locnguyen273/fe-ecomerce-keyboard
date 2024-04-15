@@ -1,11 +1,9 @@
+.carousel-banner {
+  height: 550px;
+}
 .swiper-slide img {
-  max-width: 1200px;
   width: 100%;
   object-position: center center;
-  object-fit: contain;
-}
-@include miniDesktop { 
-  .carousel-banner {
-    max-width: 1000px !important;
-  }
+  object-fit: cover;
+  height: 100%;
 }

@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Image, Button } from "antd";
 import Logo from "../../assets/images/logo-desktop.png";
 import { Link } from "react-router-dom";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ModalSearch from "../modal-search";
 
 const Header = () => {
   const [showSearchModal, setShowSearchModal] = useState(false);
-  let ref = useRef(null);
+  const ref: any = useRef();
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -20,11 +21,10 @@ const Header = () => {
     };
   });
 
-  const handleSetShowModal = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
+  const handleSetShowModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     setShowSearchModal((prevState) => !prevState);
+    console.log(showSearchModal);
   };
 
   return (
@@ -74,7 +74,7 @@ const Header = () => {
         </div>
       </div>
 
-      {showSearchModal && <ModalSearch showSearchModal={showSearchModal} />}
+      {showSearchModal && <ModalSearch />}
     </div>
   );
 };
