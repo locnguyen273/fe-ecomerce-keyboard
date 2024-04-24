@@ -5,9 +5,14 @@
 @import "./temp-client";
 // components
 @import "./components/header";
+@import "./components/swiper-custom";
+
+//home page
 @import "./components/modal-search";
 @import "./components/carousel-banner";
 @import "./components/category";
+@import "./components/news-latest";
+
 //product
 @import "./components/product/new-product-list";
 @import "./components/product/product-item";

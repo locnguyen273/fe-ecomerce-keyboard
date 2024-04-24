@@ -5,6 +5,10 @@ import ClientTemplate from "./templates/client";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 
+
+import "swiper/scss";
+import "swiper/scss/navigation";
+
 function App() {
   return (
     <Routes>

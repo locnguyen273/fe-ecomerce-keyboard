@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/scss";
-import "swiper/scss/navigation";
 
 const CarouselBanner = () => {
   return (
