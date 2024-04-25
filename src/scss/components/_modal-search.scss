@@ -1,8 +1,12 @@
+.modal-search-container {
+  max-width: 1200px;
+  margin: auto;
+}
 .modal-search {
   border: 1px solid $main-border;
   width: 420px;
-  position: absolute;
-  right: 40px;
+  position: fixed;
+  right: 5%;
   padding: 15px 20px 25px;
   animation: showModal 0.3s 0s ease-in-out forwards;
   box-shadow: $box-shadow;
@@ -34,9 +38,21 @@
   }
 }
 
+@include miniDesktop {
+  .modal-search {
+    right: 5%;
+  }
+}
+
+@include tablet {
+  .modal-search {
+    right: 1%;
+  }
+}
+
 @include mobile {
   .modal-search {
     max-width: calc(100% - 30px);
-    right: 15px;
+    right: 2%;
   }
 }
