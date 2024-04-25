@@ -1,0 +1,14 @@
+.temp-client {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  &__body {
+    max-width: calc(100% - 20px);
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 75px;
+    overflow: hidden;
+  }
+}

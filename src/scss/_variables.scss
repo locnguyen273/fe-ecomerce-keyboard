@@ -1,23 +1,24 @@
-$bg-header-main: #131921;
+$bg-header-main: #040b69;
 $main-bg: #fff0;
 $main-color: #4267b2;
+$main-border: #dfe3e8;
 
 $txt-main-color: #000;
 $txt-second-color: #8d8d8d;
 $txt-white: #fff;
-
+$txt-white-opacity: #ffffffc7;
 $btn-main-bg: $main-color;
 $btn-main-color: #fff;
+$bg-button-hover: #d8d8d8;
 
 $header-height: 170px;
 $header-tablet-height: 70px;
 $header-mobile-height: 40px;
 $header-shrink-height: 100px;
 
-$box-shadow: rgb(49 51 53 / 66%) 0px 8px 24px;
+$box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.1);
 
 $colors: (
-  "blue": #4267b2,
   "orange": #fbb96b,
   "pink": #fe7e73,
   "white": #fff,
