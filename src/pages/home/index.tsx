@@ -11,7 +11,6 @@ const Home = () => {
       <Category></Category>
       <NewProductList></NewProductList>
       <NewLatest></NewLatest>
-      Home
     </div>
   )
 }
