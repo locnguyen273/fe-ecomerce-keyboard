@@ -30,7 +30,7 @@ const Footer = () => {
             <Link to={"/"} className="footer__column--content">Chính sách đổi trả</Link>
           </div>
         </div>
-        <div className="footer__column">
+        <div className="footer__column box-three">
           <h5 className="footer__column--title">nhận tin khuyến mãi</h5>
           <Search
             className="footer__column--search"
