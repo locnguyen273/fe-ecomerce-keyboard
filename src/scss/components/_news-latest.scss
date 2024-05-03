@@ -66,3 +66,28 @@
     }
   }
 }
+
+@include miniDesktop {
+  .news-latest {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@include tablet {
+  .news-latest {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include mobile {
+  .news-latest {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+

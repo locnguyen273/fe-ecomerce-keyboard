@@ -82,3 +82,60 @@
     }
   }
 }
+
+@include miniDesktop {
+  .product-item {
+    &__top {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+    &__detail {
+      max-height: 120px;
+      &__name {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .product-item {
+    &__top {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+    &__detail {
+      max-height: 120px;
+      &__name {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      &__add {
+        margin: 10px 0 0;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .product-item {
+    height: 380px;
+    &__top {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+    &__detail {
+      max-height: 120px;
+      &__name {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      &__add {
+        margin: 10px 0 0;
+      }
+    }
+  }
+}
