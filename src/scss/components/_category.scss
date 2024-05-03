@@ -38,6 +38,11 @@
   .category {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    &__item {
+      &--image {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -45,5 +50,10 @@
   .category {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    &__item {
+      &--image {
+        width: 100%;
+      }
+    }
   }
 }
