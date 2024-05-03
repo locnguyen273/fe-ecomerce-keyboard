@@ -114,6 +114,12 @@
       }
       &__add {
         margin: 10px 0 0;
+        font-size: 12px;
+        &--icon-cart {
+          height: 32px;
+          width: 32px;
+          line-height: 32px;
+        }
       }
     }
   }
