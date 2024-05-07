@@ -79,6 +79,9 @@
         color: $txt-white !important;
       }
     }
+    &--custom-dropdown {
+      border-radius: 0;
+    }
   }
 }
 

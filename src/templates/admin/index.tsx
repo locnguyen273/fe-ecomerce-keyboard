@@ -1,8 +1,11 @@
+import { Outlet } from "react-router-dom"
 
 
 const AdminTemplate = () => {
   return (
-    <div>AdminTemplate</div>
+    <div className="admin-container">
+      <Outlet />
+    </div>
   )
 }
 

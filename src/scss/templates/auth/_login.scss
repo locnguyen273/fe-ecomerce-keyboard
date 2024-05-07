@@ -1,0 +1,87 @@
+.login {
+  width: 500px;
+  height: 600px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px 24px;
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px;
+    img {
+      width: 100px !important;
+      border-radius: 10px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    width: 400px;
+    font-weight: 500;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  &__form-control {
+    &--label {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 0 5px;
+    }
+    &--submit {
+      width: 100%;
+      margin: 20px 0;
+      height: 42px;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 24px;
+      background: linear-gradient(45deg, #5519ae, #008def) !important;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        top: -5px;
+        left: -10px;
+        width: 0;
+        height: 50px;
+        background: #0000005e;
+        transform: skewX(-30deg);
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        &::after {
+        width: 105%; }
+      }
+    }
+    .ant-input-outlined {
+      border-radius: 0;
+      height: 42px;
+    }
+    .ant-input-affix-wrapper {
+      border-radius: 0;
+      height: 42px;
+    }
+  }
+  &__bottom {
+    text-align: center;
+    margin: -24px 0 0;
+    font-size: 16px;
+    line-height: 1.8;
+    &--link {
+      color: $main-color;
+      font-weight: 700;
+      transition: color .3s ease-out;
+      &:hover {
+        color: $bg-header-main;
+      }
+    }
+  }
+}

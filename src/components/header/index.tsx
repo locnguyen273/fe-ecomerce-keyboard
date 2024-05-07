@@ -4,15 +4,18 @@ import Logo from "../../assets/images/logo-desktop.png";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import ModalSearch from "../modal-search";
+import AuthModal from "../auth-modal";
 
 const Header = () => {
   const [showSearchModal, setShowSearchModal] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
   const ref: any = useRef();
 
   useEffect(() => {
     const handler = (e: Event) => {
       if (!ref.current.contains(e.target)) {
         setShowSearchModal(false);
+        setShowAuthModal(false);
       }
     };
     document.addEventListener("mousedown", handler);
@@ -24,7 +27,11 @@ const Header = () => {
   const handleSetShowModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
     setShowSearchModal((prevState) => !prevState);
-    console.log(showSearchModal);
+  };
+
+  const handleSetShowAuthModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setShowAuthModal((prevState) => !prevState);
   };
 
   return (
@@ -63,7 +70,7 @@ const Header = () => {
               >
                 <i className="fa-solid fa-magnifying-glass"></i>
               </Button>
-              <Button className="header__right--btn-user">
+              <Button className="header__right--btn-user" onClick={handleSetShowAuthModal}>
                 <i className="fa-solid fa-user"></i>
               </Button>
               <Button className="header__right--btn-bag">
@@ -75,6 +82,7 @@ const Header = () => {
       </div>
 
       {showSearchModal && <ModalSearch />}
+      {showAuthModal && <AuthModal />}
     </div>
   );
 };
