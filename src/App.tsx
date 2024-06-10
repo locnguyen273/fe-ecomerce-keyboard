@@ -5,6 +5,8 @@ import ClientTemplate from "./templates/client";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 
+import AdminTemplate from "./templates/admin";
+import HomeAdmin from "./pages/admin-pages/Home";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -18,6 +20,11 @@ function App() {
         <Route path="contact" element={<Contact />}></Route>
       </Route>
       <Route path="login" element={<Login />}></Route>
+
+      {/* admin */}
+      <Route path="/admin" element={<AdminTemplate />}>
+        <Route index path="" element={<HomeAdmin />}></Route>
+      </Route>
     </Routes>
   );
 }

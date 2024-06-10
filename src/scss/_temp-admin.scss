@@ -1,0 +1,10 @@
+.admin-template {
+  display: flex;
+  &__left {
+    background-color: $main-bg-admin;
+    width: 30%;
+    max-width: 300px;
+    min-width: 270px;
+    height: 100vh;
+  }
+}

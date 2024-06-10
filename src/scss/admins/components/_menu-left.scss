@@ -1,0 +1,17 @@
+.nav-menu {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    height: 70px;
+    img {
+      width: 50px !important;
+    }
+    &--title {
+      color: $txt-white;
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+}
