@@ -11,7 +11,29 @@
     &--title {
       color: $txt-white;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 18px;
+    }
+  }
+
+  &__body {
+    &--item {
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      padding: 0 24px;
+      color: $txt-white;
+      transition: all 0.3s ease-in;
+      .fa-user,
+      .fa-product-hunt {
+        margin: 0 10px 0 0;
+      }
+      &:hover {
+        background-color: #7a89ff3b;
+      }
+    }
+    .active {
+      color: $txt-white;
+      background-color: #7a89ff3b;
     }
   }
 }

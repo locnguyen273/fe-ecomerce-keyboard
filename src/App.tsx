@@ -6,7 +6,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 
 import AdminTemplate from "./templates/admin";
-import HomeAdmin from "./pages/admin-pages/Home";
+import { HomeAdmin, ManageUser, ManageProduct } from "./pages/admin-pages/index";
 
 import "swiper/scss";
 import "swiper/scss/navigation";
@@ -24,6 +24,8 @@ function App() {
       {/* admin */}
       <Route path="/admin" element={<AdminTemplate />}>
         <Route index path="" element={<HomeAdmin />}></Route>
+        <Route index path="manage-user" element={<ManageUser />}></Route>
+        <Route index path="manage-product" element={<ManageProduct />}></Route>
       </Route>
     </Routes>
   );

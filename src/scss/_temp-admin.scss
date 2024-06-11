@@ -7,4 +7,36 @@
     min-width: 270px;
     height: 100vh;
   }
+  &__right {
+    width: 100%;
+    background-color: $bg-header-main-admin;
+    &__header {
+      background-color: $txt-white;
+      height: 70px;
+      &--container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 100%;
+      }
+      &--search {
+        max-width: 400px;
+      }
+      &--user {
+        display: flex;
+        align-items: center;
+        height: auto;
+        border: none;
+        box-shadow: none;
+      }
+      &--avatar {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-right: 8px;
+      }
+    }
+  }
 }
