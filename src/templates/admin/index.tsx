@@ -1,10 +1,33 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Outlet } from "react-router-dom";
 import { NavbarMenu } from "../../components/admins/index";
 import { Button, Input, Image } from "antd";
 import { SearchProps } from "antd/es/input";
+import { useEffect, useRef, useState } from "react";
 const { Search } = Input;
 
 const AdminTemplate = () => {
+  const [showInfoPopup, setShowInfoPopup] = useState(false);
+  const ref: any = useRef();
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      if (!ref.current.contains(e.target)) {
+        setShowInfoPopup(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
+  const handleSetShowModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setShowInfoPopup((prevState) => !prevState);
+    console.log(showInfoPopup);
+  };
+
   const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
     console.log(info?.source, value);
 
@@ -21,7 +44,7 @@ const AdminTemplate = () => {
               placeholder="input search text"
               onSearch={onSearch}
             />
-            <Button className="admin-template__right__header--user">
+            <Button ref={ref} className="admin-template__right__header--user" onClick={handleSetShowModal}>
               <Image 
                 className="admin-template__right__header--avatar"
                 src="https://themekita.com/demo-kaiadmin-lite-bootstrap-dashboard/livepreview/demo1/assets/img/profile.jpg" 
@@ -30,6 +53,9 @@ const AdminTemplate = () => {
               Hi, Admin
             </Button>
           </div>
+          {showInfoPopup && <div className="admin-template__right__header--popup">
+
+          </div>}
         </div>
         <Outlet />
       </div>
