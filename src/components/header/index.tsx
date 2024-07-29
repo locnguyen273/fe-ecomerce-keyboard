@@ -26,11 +26,13 @@ const Header = () => {
 
   const handleSetShowModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+    setShowAuthModal(false);
     setShowSearchModal((prevState) => !prevState);
   };
 
   const handleSetShowAuthModal = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
+    setShowSearchModal(false);
     setShowAuthModal((prevState) => !prevState);
   };
 
