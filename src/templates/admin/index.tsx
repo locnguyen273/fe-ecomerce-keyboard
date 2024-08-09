@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Outlet } from "react-router-dom";
-import { NavbarMenu } from "../../components/admins/index";
+import { NavLink, Outlet } from "react-router-dom";
+import { BreadCrumb, NavbarMenu } from "../../components/admins/index";
 import { Button, Input, Image } from "antd";
 import { SearchProps } from "antd/es/input";
 import { useEffect, useRef, useState } from "react";
@@ -53,10 +53,15 @@ const AdminTemplate = () => {
               Hi, Admin
             </Button>
           </div>
-          {showInfoPopup && <div className="admin-template__right__header--popup">
-
-          </div>}
+          {
+            showInfoPopup && 
+            <div className="admin-template__right__header--popup">
+              <NavLink to="">Thông tin cá nhân</NavLink>
+              <NavLink to="">Đăng xuất</NavLink>
+            </div>
+          }
         </div>
+        <BreadCrumb />
         <Outlet />
       </div>
     </div>

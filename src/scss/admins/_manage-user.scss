@@ -1,0 +1,57 @@
+.manage-user {
+  &__container {
+    padding: 24px 20px;
+    .ant-table-wrapper {
+      .ant-table-cell:nth-child(1),
+      .ant-table-cell:nth-child(2) {
+        width: 20%;
+      }
+      .ant-table-cell:nth-child(3) {
+        width: 15%;
+      }
+      .ant-table-cell:nth-last-child(1) {
+        width: 10%;
+      }
+    }
+  }
+
+  &__btn-view-detail,
+  &__btn-delete,
+  &__btn-edit {
+    border: none;
+    font-size: 20px;
+    line-height: 20px;
+    background: transparent;
+    box-shadow: none;
+    &:hover {
+      background: transparent !important;
+    }
+  }
+
+  &__btn-view-detail {
+    color: $btn-blue;
+    &:hover {
+      color: $btn-blue !important;
+    }
+  }
+
+  &__btn-delete {
+    color: $btn-red;
+    &:hover {
+      color: $btn-red !important;
+    }
+  }
+
+  &__btn-edit {
+    color: $btn-green;
+    &:hover {
+      color: $btn-green !important;
+    }
+  }
+
+  &__table-box {
+    padding: 6px 8px;
+    min-width: 100px;
+    text-align: center;
+  }
+}
