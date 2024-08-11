@@ -1,72 +1,73 @@
 .admin-template {
-  display: flex;
-  &__left {
-    background-color: $main-bg-admin;
-    width: 30%;
-    max-width: 300px;
-    min-width: 270px;
-    height: 100vh;
-  }
-  &__right {
-    width: 100%;
-    background-color: $bg-header-main-admin;
-    &__header {
-      background-color: $txt-white;
-      height: 70px;
-      position: relative;
-      &--container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        height: 100%;
-      }
-      &--search {
-        max-width: 400px;
-      }
-      &--user {
-        display: flex;
-        align-items: center;
-        height: auto;
-        border: none;
-        box-shadow: none;
-      }
-      &--avatar {
-        width: 40px !important;
-        height: 40px !important;
-        border-radius: 50%;
-        object-fit: contain;
-        margin-right: 8px;
-      }
-      &--popup {
-        width: 200px;
-        height: auto;
-        min-height: 32px;
-        background-color: $txt-white;
-        box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        animation: showInfoPopup 1s;
-        a {
-          color: $bg-footer;
-          width: 100%;
-          padding: 12px;
-          transition: all .3s ease-in-out;
-          &:hover {
-            background-color: $bg-button-hover;
-          }
-        }
-      }
+    display: flex;
+    &__left {
+        background-color: $main-bg-admin;
+        width: 30%;
+        max-width: 300px;
+        min-width: 270px;
+        height: 100vh;
     }
-  }
+    &__right {
+        width: 100%;
+        background-color: $bg-header-main-admin;
+        &__header {
+            background-color: $txt-white;
+            height: 70px;
+            position: relative;
+            &--container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                height: 100%;
+            }
+            &--search {
+                max-width: 400px;
+            }
+            &--user {
+                display: flex;
+                align-items: center;
+                height: auto;
+                border: none;
+                box-shadow: none;
+            }
+            &--avatar {
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 50%;
+                object-fit: contain;
+                margin-right: 8px;
+            }
+            &--popup {
+                width: 200px;
+                height: auto;
+                min-height: 32px;
+                background-color: $txt-white;
+                box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px, rgba(14, 63, 126, 0.04) 0px 12px 12px -6px, rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                animation: showInfoPopup 1s;
+                z-index: 10;
+                a {
+                    color: $bg-footer;
+                    width: 100%;
+                    padding: 12px;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        background-color: $bg-button-hover;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes showInfoPopup {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
