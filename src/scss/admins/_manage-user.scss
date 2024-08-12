@@ -54,4 +54,14 @@
     min-width: 100px;
     text-align: center;
   }
+  &__btn-add {
+    background-color: $btn-add-new-admin;
+    color: $btn-main-color;
+    border: none;
+    height: 36px;
+    &:hover {
+      background-color: $btn-add-new-admin-hover !important;
+      color: $btn-main-color !important;
+    }
+  }
 }

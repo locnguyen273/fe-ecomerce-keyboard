@@ -3,6 +3,8 @@ const slugToTitleDictionary : any = {
   "admin": "Trang chủ",
   "manage-user": "Quản lý người dùng",
   "manage-product": "Quản lý sản phẩm",
+  "create": "Thêm mới",
+  "update": "Cập nhật",
 }
 
 export const convertSlugToTitle = (slug: string) => {

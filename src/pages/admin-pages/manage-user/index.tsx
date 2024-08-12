@@ -1,5 +1,6 @@
-import { Button, Space, Table, Tag } from "antd";
+import { Button, Space, Table, Tag, Switch } from "antd";
 import type { TableProps } from "antd";
+import { useNavigate } from "react-router-dom";
 
 interface DataType {
   key: string;
@@ -10,7 +11,8 @@ interface DataType {
   role: number;
 }
 
-const ManageUser = () => {
+const HomeManageUser = () => {
+  const navigate = useNavigate();
   const columns: TableProps<DataType>["columns"] = [
     {
       title: "Họ và tên",
@@ -33,9 +35,7 @@ const ManageUser = () => {
       dataIndex: "isBlocked",
       key: "isBlocked",
       render: (isBlocked) => (
-        <Tag color={isBlocked ? "geekblue" : "green"} className="manage-user__table-box">
-          {isBlocked ? "Inactive" : "Active"}
-        </Tag>
+        <Switch size="small" defaultChecked={!isBlocked} onChange={onChangeToggleActive} />
       ),
     },
     {
@@ -49,17 +49,14 @@ const ManageUser = () => {
       ),
     },
     {
-      title: "",
+      title: <Button onClick={() => handleCreateNewUser()} className="manage-user__btn-add">Thêm Người Dùng</Button>,
       key: "action",
-      render: () => (
+      render: (key) => (
         <Space size="middle">
-          <Button className="manage-user__btn-view-detail">
-            <i className="fa-regular fa-eye"></i>
-          </Button>
           <Button className="manage-user__btn-delete">
             <i className="fa-solid fa-trash">
               </i></Button>
-          <Button className="manage-user__btn-edit">
+          <Button className="manage-user__btn-edit"  onClick={() => handleUpdateUser(key?.key)}>
             <i className="fa-regular fa-pen-to-square"></i>
           </Button>
         </Space>
@@ -93,6 +90,18 @@ const ManageUser = () => {
     },
   ];
 
+  const onChangeToggleActive = () => {};
+
+  const handleCreateNewUser = () => {
+    navigate('/admin/manage-user/create')
+    console.log("create new user");
+  };
+
+  const handleUpdateUser = (userId: string) => {
+    navigate(`/admin/manage-user/update/${userId}`)
+    console.log("create new user", userId);
+  };
+
   return (
     <div className="manage-user">
       <div className="manage-user__container">
@@ -102,4 +111,4 @@ const ManageUser = () => {
   );
 };
 
-export default ManageUser;
+export default HomeManageUser;
